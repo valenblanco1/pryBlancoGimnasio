@@ -24,5 +24,10 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void lblCuotas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
