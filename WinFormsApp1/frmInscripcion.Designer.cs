@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInscripcion));
             groupBox1 = new GroupBox();
             chkEstudiante = new CheckBox();
             txtEdad = new TextBox();
@@ -49,7 +50,6 @@
             rbtEfectivo = new RadioButton();
             btnCalcular = new Button();
             btnLimpiar = new Button();
-            lblResultado = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -239,6 +239,7 @@
             rbtTarjeta.TabStop = true;
             rbtTarjeta.Text = "Tarjeta";
             rbtTarjeta.UseVisualStyleBackColor = true;
+            rbtTarjeta.CheckedChanged += rbtTarjeta_CheckedChanged;
             // 
             // rbtEfectivo
             // 
@@ -259,6 +260,7 @@
             btnCalcular.TabIndex = 3;
             btnCalcular.Text = "&Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // btnLimpiar
             // 
@@ -269,31 +271,23 @@
             btnLimpiar.Text = "&Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
             // 
-            // lblResultado
-            // 
-            lblResultado.AutoSize = true;
-            lblResultado.Location = new Point(20, 439);
-            lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(59, 15);
-            lblResultado.TabIndex = 5;
-            lblResultado.Text = "Resultado";
-            // 
             // frmInscripcion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(499, 499);
-            Controls.Add(lblResultado);
+            ClientSize = new Size(514, 432);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCalcular);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimizeBox = false;
             Name = "frmInscripcion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gimnasio Siglo 21 Inscripción";
+            Load += frmInscripcion_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -301,7 +295,6 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -327,6 +320,5 @@
         private RadioButton rbtEfectivo;
         private Button btnCalcular;
         private Button btnLimpiar;
-        private Label lblResultado;
     }
 }
