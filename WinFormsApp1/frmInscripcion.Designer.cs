@@ -202,7 +202,7 @@
             groupBox3.Controls.Add(lblCuotas);
             groupBox3.Controls.Add(rbtTarjeta);
             groupBox3.Controls.Add(rbtEfectivo);
-            groupBox3.Location = new Point(304, 109);
+            groupBox3.Location = new Point(315, 29);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(136, 136);
             groupBox3.TabIndex = 2;
@@ -254,7 +254,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(117, 370);
+            btnCalcular.Location = new Point(324, 197);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(114, 43);
             btnCalcular.TabIndex = 3;
@@ -264,12 +264,13 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(260, 370);
+            btnLimpiar.Location = new Point(324, 257);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(114, 43);
             btnLimpiar.TabIndex = 4;
             btnLimpiar.Text = "&Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // frmInscripcion
             // 
